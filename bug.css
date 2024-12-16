@@ -1,0 +1,25 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors:
+
+```css
+div {
+  color: blue;
+}
+
+.special div {
+  color: red;
+}
+
+#id div {
+  color: green;
+}
+
+#id .special div {
+  color: purple; 
+}
+
+#id .special div span {
+  color: yellow; /* This will take precedence */
+}
+```
+
+The unexpected behavior occurs when trying to predict the color of a `span` element nested within a `div` that has multiple classes and an ID.  Due to the specificity rules of CSS, the most specific selector (`#id .special div span`) takes precedence, resulting in yellow text, even though less specific rules exist.  Developers might mistakenly assume that rules defined earlier take precedence, overlooking the impact of specificity.
