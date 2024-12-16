@@ -1,0 +1,3 @@
+# CSS Specificity Issue: Unexpected Color Inheritance
+
+This repository demonstrates an uncommon CSS bug related to the unexpected behavior of CSS specificity when dealing with nested elements and multiple selectors. The bug showcases how the most specific selector, even when defined later, overrides other styles due to specificity rules. The solution provides an explanation and updated code to highlight the correct behavior.
